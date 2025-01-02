@@ -10,7 +10,7 @@ source:
   sha256: 74120d2e15a6d1ad2f2d48f01f3bf5f230935e6a89aaf34fada63c06ce2e9c6b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - six
     - python-dateutil
     - urllib3
@@ -43,6 +43,7 @@ test:
     - dflow.python
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - dflow -h
     - pip check
