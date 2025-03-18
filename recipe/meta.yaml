@@ -1,5 +1,5 @@
 {% set name = "pydflow" %}
-{% set version = "1.8.105" %}
+{% set version = "1.8.106" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eb8858e5ad0813963b22a3b26e789e8536a9f5ffb1ca1e859a44f033eb446d5b
+  sha256: b887f40513420c3585a1a840d3f805798311f50cccd5420d86b1144856037d52
 
 build:
   number: 0
