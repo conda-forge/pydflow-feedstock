@@ -36,6 +36,7 @@ requirements:
     - requests
     - tqdm
     - psutil
+    - filelock
 
 test:
   imports:
